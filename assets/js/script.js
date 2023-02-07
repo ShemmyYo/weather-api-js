@@ -12,12 +12,9 @@ window.addEventListener('load', () => {
         navigator.geolocation.getCurrentPosition(possition => {
             long = possition.coords.longitude;
             lat = possition.coords.latitude;
-            console.log(long);
-            console.log(lat);
 
             const proxy = "https://cors-anywhere.herokuapp.com/"
             const api = `${proxy}https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat},${long}&aqi=yes`
-            //`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m`;
 
             fetch(api)
             .then(response => {
