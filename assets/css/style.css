@@ -1,0 +1,45 @@
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, hsl(200, 100%, 20%),hsla(308, 79%, 45%, 0.678), hsl(118, 79%, 45%));
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
+
+.location,
+.temperature {
+    height:30vh;
+    width: 50%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+} 
+
+.temperature {
+    flex-direction: column;
+}
+
+.degree-section {
+    display: flex;
+    align-items:flex-start;
+    cursor: pointer;
+}
+
+.degree-section span {
+    /* display: flex; */
+    margin-left: 10px;
+}
+
+.degree-section h2 {
+    font-size:  40px;
+}
